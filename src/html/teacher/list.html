@@ -41,20 +41,8 @@
                 <th>操作</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>赵玉川</td>
-                <td>布头儿</td>
-                <td>1980-01-01</td>
-                <td>男</td>
-                <td>15901256171</td>
-                <td>
-                  <a href="#teacherModal" data-toggle="modal" data-target="#teacherModal" class="btn btn-info btn-xs">查 看</a>
-                  <a href="./edit.html" class="btn btn-info btn-xs">编 辑</a>
-                  <a href="javascript:;" class="btn btn-warning btn-xs">注 销</a>
-                </td>
-              </tr>
+            <tbody id="tbody-teacher-list">
+              <!-- 讲师列表模板的坑 -->
             </tbody>
           </table>
         </div>
@@ -80,7 +68,7 @@
                 <td colspan="3">讲师</td>
                 <td rowspan="4" width="128">
                   <div class="avatar">
-                    <img src="./images/default.png" alt="">
+                    <img src="" alt="">
                   </div>
                 </td>
               </tr>
@@ -121,7 +109,24 @@
       </div>
     </div>
   </div>
-
+  <!-- 讲师列表模板 -->
+  <script type="text/template" id="teacher-list-tpl">
+    {{ each $data teacher i}}
+    <tr>
+      <td>{{ i+1 }}</td>
+      <td>{{ teacher.tc_name }}</td>
+      <td>{{ teacher.tc_roster}}</td>
+      <td>{{ teacher.tc_birthday }}</td>
+      <td>{{ teacher.tc_gender==0?"男":"女"}}</td>
+      <td>{{ teacher.tc_cellphone}}</td>
+      <td>
+        <a href="#teacherModal" data-toggle="modal" data-target="#teacherModal" class="btn btn-info btn-xs">查 看</a>
+        <a href="/dist/html/teacher/edit.html?tc_id={{ teacher.tc_id }}" class="btn btn-info btn-xs">编 辑</a>
+        <a data-id="{{ teacher.tc_id }}" data-status="{{ teacher.tc_status }}" id="btn-teacher" href="javascript:;" class="btn btn-warning btn-xs">{{ teacher.tc_status==0?"注 销":"启 用" }}</a>
+      </td>
+    </tr>
+    {{ /each }}
+  </script>
   <script src="/dist/js/lib.js"></script>
   <script src="/dist/js/teacher/list.js"></script>
 </body>
