@@ -18,6 +18,7 @@ $.ajax({
 //提交表单
 $('#profile-form').ajaxForm({
   delegation:true,
+  delegation:true,
   success:function(data){
     if(data.code == 200){
       alert("修改成功");
