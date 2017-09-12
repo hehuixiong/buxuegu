@@ -24,6 +24,7 @@ gulp.task('html',function(){
     style:gulp.src('src/html/common/style.html'),
     aside:gulp.src('src/html/common/aside.html'),
     header:gulp.src('src/html/common/header.html'),
+    loading:gulp.src('src/html/common/loading.html'),
   }))
   .pipe(htmlmin({
     minifyCSS:true,
@@ -39,7 +40,9 @@ var jsLibs = [
   'node_modules/jquery/dist/jquery.js',
   'node_modules/art-template/lib/template-web.js',
   'node_modules/bootstrap/dist/js/bootstrap.js',
-  'node_modules/jquery-form/dist/jquery.form.min.js'
+  'node_modules/jquery-form/dist/jquery.form.min.js',
+  'node_modules/nprogress/nprogress.js',
+  'node_modules/jquery-region/jquery.region.js'
 ];
 
 gulp.task('jsLib',function(){
