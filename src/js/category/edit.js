@@ -13,7 +13,6 @@ $("#edit-category-form").ajaxForm({
   delegation:true,
   success:function(data){
     if(data.code == 200){
-      alert("学科修改成功")
       location.href = '/dist/html/category/list.html'
     }
   }

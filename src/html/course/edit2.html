@@ -18,73 +18,51 @@
       <!-- 头部 -->
       <!-- build:header -->
       <!-- endbuild -->
-      <div class="body course-add">
+      <div id="course-edit2" class="body course-add">
         <!-- 面包屑 -->
         <ol class="breadcrumb">
           <li><a href="javascript:;">课程管理</a></li>
           <li class="active">课程添加</li>
         </ol>
-        <div class="steps">
-          <!-- 摘要 -->
-          <div class="brief">
-            <div class="thumb">
-              <img src="/public/uploads/course_2.jpg" alt="">
-            </div>
-            <dl class="info">
-              <dt>Git 指南</dt>
-              <dd>讲师：李鹏周</dd>
-              <dd>课时：32</dd>
-            </dl>
-          </div>
-          <!-- 步聚 -->
-          <ul class="forwards list-unstyled">
-            <li>
-              <a href="/dist/html/course/edit1.html" class="done">
-                <b class="fa fa-check"></b>
-                基本信息
-              </a>
-            </li>
-            <li>
-              <a href="/dist/html/course/edit2.html" class="active">
-              <b>2</b>
-              课程图片
-              </a>
-            </li>
-            <li>
-              <a href="/dist/html/course/edit3.html">
-              <b>3</b>
-              课时管理
-              </a>
-            </li>
-          </ul>
-          <!-- 课程图片 -->
-          <div class="content">
-            <!-- 标题 -->
-            <div class="title">
-              <h5>课程图片 <small>COURSE PICTURE</small></h5>
-            </div>
-            <!-- 上传图片 -->
-            <div class="picture col-xs-offset-2">
-              <div class="preview">
-                <img src="./uploads/course.png" alt="">
-              </div>
-              <p class="tips">
-                可上传jpg, gif, png格式文件, 图片建议尺寸大于300x150，文件大小不能超过2M。
-              </p>
-              <div class="col-xs-2">
-                <a href="javasrcipt:;`" class="btn btn-success btn-sm">选择图片</a>
-              </div>
-              <div class="col-xs-2">
-                <a href="javascript:;" class="btn btn-warning btn-sm" disabled>裁切图片</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- 课程添加第二步模板的坑 -->
       </div>
     </div>
   </div>
   <!-- build:loading -->
   <!-- endbuild -->
+  <!-- 课程添加第二步模板 -->
+  <script type="text/template" id="course-edit2-tpl">
+    <div class="steps">
+      <!-- 摘要 -->
+      <!-- build:courseEditHeader -->
+      <!-- endbuild -->
+      <!-- 步聚 -->
+      <!-- build:courseEditAside -->
+      <!-- endbuild -->
+      <!-- 课程图片 -->
+      <div class="content">
+        <!-- 标题 -->
+        <div class="title">
+          <h5>课程图片 <small>COURSE PICTURE</small></h5>
+        </div>
+        <!-- 上传图片 -->
+        <div class="picture col-xs-offset-2">
+          <div class="preview">
+            <img src="{{ cs_cover_original }}" alt="">
+          </div>
+          <p class="tips">
+            可上传jpg, gif, png格式文件, 图片建议尺寸大于300x150，文件大小不能超过2M。
+          </p>
+          <div class="col-xs-2">
+            <a href="javasrcipt:;`" class="btn btn-success btn-sm">选择图片</a>
+          </div>
+          <div class="col-xs-2">
+            <a href="javascript:;" class="btn btn-warning btn-sm" disabled>裁切图片</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
   <script src="/dist/js/lib.js"></script>
   <script src="/dist/js/course/edit2.js"></script>
 </body>

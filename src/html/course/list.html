@@ -38,10 +38,10 @@
     {{ each $data course i }}
     <div class="course">
       <div class="pic">
-        <img src="{{ course.cs_cover }}" alt="">
+        <img src="{{ course.cs_cover || '/public/img/course.png' }}" alt="">
       </div>
       <div class="info">
-        <a href="/dist/html/course/edit1.html">{{ course.cg_name }}</a>
+         <a href="/dist/html/course/edit1.html?cs_id={{ course.cs_id }}">{{ course.cg_name }}</a> 
         <ul class="list-unstyled">
           <li>
             <span>讲师：{{ course.tc_name }}</span>

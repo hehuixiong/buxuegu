@@ -26,6 +26,8 @@
       </div>
     </div>
   </div>
+  <!-- build:loading -->
+  <!-- endbuild -->
   <!-- 个人资料模板 -->
   <script type="text/template" id="settings-tpl">
     <form id="profile-form" action="/v6/teacher/modify" method="post" class="form-horizontal"  enctype="multipart/form-data">
@@ -40,7 +42,7 @@
         <label for="" class="col-xs-3 control-label">头像</label>
         <div class="col-xs-2 preview">
           <img src="{{ tc_avatar }}">
-          <input type="file" id="upfile" data-name="tc_avatar" >
+          <input type="file" id="upfile" name="tc_avatar" >
           <div class="cover">
             <i class="fa fa-upload"></i>
           </div>

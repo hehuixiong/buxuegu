@@ -13,7 +13,6 @@ $("#teacher-edit-form").ajaxForm({
   delegation:true,
   success:function(data){
     if(data.code == 200){
-      alert('修改讲师成功');
       location.href = '/dist/html/teacher/list.html';
     }
   }

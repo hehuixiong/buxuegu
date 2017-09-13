@@ -4,7 +4,6 @@ $("#btn-logout").on('click',function(){
     type:'post',
     success:function(result){
       if(result.code == 200){
-        alert('退出成功');
         location.href = '/dist/html/user/login.html'
       }
     },

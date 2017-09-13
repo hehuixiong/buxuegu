@@ -2,7 +2,7 @@
 var userinfoStr = localStorage.getItem('userinfo');
 //把字符串通过JSON.parse转换成对象再使用
 var userinfo = JSON.parse(userinfoStr);
-$('.aside img').attr('src', userinfo.tc_avatar); //attr使用  第一个属性是字符串告诉它设置什么属性,第二个是一个对象
+$('.aside img').attr('src', userinfo.tc_avatar || "/public/img/default.png"); //attr使用  第一个属性是字符串告诉它设置什么属性,第二个是一个对象
 $(".aside h4").text(userinfo.tc_name); //设置文本
 
 //点击显示隐藏子菜单

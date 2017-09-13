@@ -25,6 +25,8 @@ gulp.task('html',function(){
     aside:gulp.src('src/html/common/aside.html'),
     header:gulp.src('src/html/common/header.html'),
     loading:gulp.src('src/html/common/loading.html'),
+    courseEditHeader:gulp.src('src/html/common/course/header.html'),
+    courseEditAside:gulp.src('src/html/common/course/aside.html'),
   }))
   .pipe(htmlmin({
     minifyCSS:true,
@@ -42,7 +44,8 @@ var jsLibs = [
   'node_modules/bootstrap/dist/js/bootstrap.js',
   'node_modules/jquery-form/dist/jquery.form.min.js',
   'node_modules/nprogress/nprogress.js',
-  'node_modules/jquery-region/jquery.region.js'
+  'node_modules/jquery-region/jquery.region.js',
+  'node_modules/jquery-uploadify/jquery.uploadify.js'
 ];
 
 gulp.task('jsLib',function(){

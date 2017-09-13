@@ -9,7 +9,6 @@ $.get('/v6/category/top',function(data){
 //添加学科
 $('#category-add-form').ajaxForm(function(data){
   if(data.code == 200){
-    alert('恭喜你,添加学科成功');
     location.href = '/dist/html/category/list.html';
   }
 });
