@@ -10,7 +10,6 @@ $.get("/v6/teacher",function(data){
 //查看讲师渲染
 
 //查看讲师功能实现
-
 $(document).on("click",".btn-info",function(){
   var data = {
     tc_id:$(this).attr("data-id")
@@ -19,6 +18,7 @@ $(document).on("click",".btn-info",function(){
     $("#look-teacher-table").html(template("look-teacher-tpl",data.result));
   })
 })
+
 
 //注销与启用讲师
 $(document).on("click","#btn-teacher",function(){

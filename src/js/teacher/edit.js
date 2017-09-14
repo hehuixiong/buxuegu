@@ -2,9 +2,10 @@ require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 var edit = require('../common/tool.js');
-//编辑讲师动态渲染
+
 //获取当然页面的id
 var tc_id = edit.getSearch("tc_id");
+//编辑讲师动态渲染
 $.get('/v6/teacher/edit',{tc_id:tc_id},function(data){
   $(".teacher-edit-form").html(template('edit-teacher-tpl',data.result));
 })

@@ -19,12 +19,4 @@ function getSearch(key){
   return key? searchObj[key] : searchObj;
 }
 
-//三级联动
-function initPCD() {
-  $("#region-container").region({
-    url: '/node_modules/jquery-region/region.json'
-  })
-}
-
 module.exports.getSearch = getSearch;
-module.exports.initPCD = initPCD;

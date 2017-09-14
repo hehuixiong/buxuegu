@@ -47,6 +47,8 @@ var jsLibs = [
   'node_modules/jquery-region/jquery.region.js',
   'node_modules/jquery-uploadify/jquery.uploadify.js',
   'node_modules/jquery.cookie/jquery.cookie.js',
+  'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+  'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js',
 ];
 
 gulp.task('jsLib',function(){

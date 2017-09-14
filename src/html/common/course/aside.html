@@ -7,13 +7,13 @@
   </li>
   <li>
     <a href="/dist/html/course/edit2.html?cs_id={{ cs_id }}" class="{{ editIndex==2?'active':'' }} {{ editIndex>2?'done':'' }}">
-      <b class="{{ editIndex>2?'fa fa-check':'' }}">{{ editIndex==2?"2":"" }}</b>
+      <b class="{{ editIndex>2?'fa fa-check':'' }}">{{ editIndex==2?"2":"" }} {{ editIndex==1?"2":"" }}</b>
       课程图片
       </a>
   </li>
   <li>
-    <a href="/dist/html/course/edit3.html?cs_id={{ cs_id }}">
-      <b>{{ editIndex==3?"3":"" }}</b>
+    <a href="/dist/html/course/edit3.html?cs_id={{ cs_id }}" class="{{ editIndex==3?'active':'' }}">
+      <b>{{ editIndex==3?"3":"" }} {{ editIndex==2?"3":"" }} {{ editIndex==1?"3":"" }}</b>
       课时管理
       </a>
   </li>

@@ -3,6 +3,7 @@ require('../common/aside.js');
 require('../common/header.js');
 var tool = require('../common/tool.js');
 
+//获取当前页面的cs_id,调用公共的获取search
 var cs_id = tool.getSearch("cs_id");
 
 //课程创建与课程编辑信息展示
@@ -15,7 +16,7 @@ $.get('/v6/course/basic', {
   }
 });
 
-//子级学科分类--使用委托的方式绑定事件
+//子级学科分类--二级联动--使用委托的方式绑定事件
 $(document).on('change', "#select-form", function () {
   var cg_id = $(this).val();
   $.get("/v6/category/child", {

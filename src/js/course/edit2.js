@@ -2,6 +2,7 @@ require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 var tool = require('../common/tool.js');
+//获取当然页面的cs_id
 var cs_id = tool.getSearch("cs_id");
 //课程创建与课程编辑信息展示
 $.get('/v6/course/picture', {

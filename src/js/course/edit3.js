@@ -27,10 +27,14 @@ $(document).on("click",".btn-lessons-edit",function(){
 //修改编辑与添加模态框的数据
 $("#course-edit3-form").ajaxForm({
   delegation:true,
+  beforeSubmit:function(arrData){
+    arrData.push({
+      name:'ct_is_free',
+      value:$("#ct_is_free").prop("checked")?1:0   //提交之前把选项修改
+    })
+  },
   success:function(data){
-    if(data.code==200){
       location.href = '/dist/html/course/edit3.html?cs_id='+cs_id;
-    }
   }
 });
 // 编辑模态框数据回显--因为编辑与添加使用的是同一个模态框,所以回显的时候把数据清空
