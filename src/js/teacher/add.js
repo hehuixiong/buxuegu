@@ -1,3 +1,4 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 //添加讲师

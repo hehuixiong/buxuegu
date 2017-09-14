@@ -45,7 +45,8 @@ var jsLibs = [
   'node_modules/jquery-form/dist/jquery.form.min.js',
   'node_modules/nprogress/nprogress.js',
   'node_modules/jquery-region/jquery.region.js',
-  'node_modules/jquery-uploadify/jquery.uploadify.js'
+  'node_modules/jquery-uploadify/jquery.uploadify.js',
+  'node_modules/jquery.cookie/jquery.cookie.js',
 ];
 
 gulp.task('jsLib',function(){

@@ -1,6 +1,6 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
-
 //创建课程
 $("#course-add-form").ajaxForm(function(data){
   if(data.code == 200){

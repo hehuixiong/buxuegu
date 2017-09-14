@@ -1,3 +1,4 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 var tool = require('../common/tool.js');
@@ -11,3 +12,5 @@ $.get('/v6/course/picture', {
     $('#course-edit2').append(template('course-edit2-tpl', data.result));
   }
 });
+
+//上传封面图

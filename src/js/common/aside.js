@@ -18,12 +18,3 @@ $('.navs a').removeClass('active');
 $('.navs a[href="' + path + '"]').addClass('active').parents('ul').show();
 
 
-//进度条与工具条
-NProgress.start();
-NProgress.done();
-$(document).ajaxStart(function () {
-  $(".overlay").show()
-});
-$(document).ajaxStop(function () {
-  $(".overlay").hide()
-})

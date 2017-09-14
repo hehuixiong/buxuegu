@@ -1,3 +1,4 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 var tool = require('../common/tool.js');
@@ -18,7 +19,21 @@ $(document).on("click",".btn-lessons-edit",function(){
   var ct_id = {
     ct_id:$(this).attr('data-id')
   }
-  $.get('/v6/course/chapter/edit',ct_id,function(){
-    
+  $.get('/v6/course/chapter/edit',ct_id,function(data){
+    $("#chapterModal").html(template('modal-edit-tpl',data.result));
   })
+});
+
+//修改编辑与添加模态框的数据
+$("#course-edit3-form").ajaxForm({
+  delegation:true,
+  success:function(data){
+    if(data.code==200){
+      location.href = '/dist/html/course/edit3.html?cs_id='+cs_id;
+    }
+  }
+});
+// 编辑模态框数据回显--因为编辑与添加使用的是同一个模态框,所以回显的时候把数据清空
+$(document).on("click","#course-edit3-add",function(){
+    $("#chapterModal").html(template('modal-edit-tpl',{cs_id:cs_id}));
 });

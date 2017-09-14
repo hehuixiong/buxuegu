@@ -1,3 +1,4 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
 var edit = require('../common/tool.js');

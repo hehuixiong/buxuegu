@@ -1,6 +1,6 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
-
 
 //修改密码
 $('.form-horizontal').on('submit',function(){

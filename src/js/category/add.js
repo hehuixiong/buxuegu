@@ -1,5 +1,7 @@
+require('../common/common.js');
 require('../common/aside.js');
 require('../common/header.js');
+
 
 //动态渲染顶级分类
 $.get('/v6/category/top',function(data){
